@@ -29,5 +29,5 @@ PRIMARY_MACRO = "VIX"          # macro used for deformation
 
 # Deformation parameters
 DEFORMATION_STEPS = 5          # number of macro deformation levels
-RIPS_MAX_DISTANCE = 0.8        # maximum distance for Rips complex
+RIPS_MAX_DISTANCE = 0.5        # maximum distance for Rips complex
 TOP_N = 3
