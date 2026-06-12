@@ -30,4 +30,5 @@ PRIMARY_MACRO = "VIX"          # macro used for deformation
 # Deformation parameters
 DEFORMATION_STEPS = 5          # number of macro deformation levels
 K_NEIGHBORS = 5
+RIPS_MAX_DISTANCE = 0.3
 TOP_N = 3
