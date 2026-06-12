@@ -32,9 +32,8 @@ def run_for_window(returns, macro_df, window_days):
     raw_scores = deformed_cohomology_aggregate_score(
         ret_window,
         macro_window,
-        primary_macro=config.PRIMARY_MACRO,
-        max_distance=config.RIPS_MAX_DISTANCE,
-        steps=config.DEFORMATION_STEPS
+        max_distance=0.8,   # not used in current implementation, kept for compatibility
+        steps=5
     )
     norm_scores = normalize_scores(raw_scores)
     sorted_norm = sorted(norm_scores.items(), key=lambda x: x[1], reverse=True)
@@ -56,9 +55,8 @@ def main():
     results = {
         "run_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "windows": config.WINDOWS,
-        "primary_macro": config.PRIMARY_MACRO,
-        "rips_max_distance": config.RIPS_MAX_DISTANCE,
-        "deformation_steps": config.DEFORMATION_STEPS,
+        "macro_vars": config.MACRO_VARS,
+        "k_neighbors": config.K_NEIGHBORS,
         "universes": {}
     }
     for uni_name in config.UNIVERSES.keys():
