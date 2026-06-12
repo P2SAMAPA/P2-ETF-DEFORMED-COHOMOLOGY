@@ -19,16 +19,13 @@ UNIVERSES = {
     ]
 }
 
-# All available macro variables
+# All available macro variables (all are used)
 MACRO_VARS = [
     "VIX", "DXY", "T10Y2Y", "TBILL_3M",
     "DGS1MO", "DGS3MO", "DGS6MO", "DGS1", "DGS2", "DGS5", "DGS7",
     "DGS10", "DGS20", "DGS30"
 ]
-PRIMARY_MACRO = "VIX"          # macro used for deformation
 
 # Deformation parameters
-DEFORMATION_STEPS = 5          # number of macro deformation levels
-K_NEIGHBORS = 5
-RIPS_MAX_DISTANCE = 0.3
+K_NEIGHBORS = 5               # number of neighbours for k‑NN graph
 TOP_N = 3
