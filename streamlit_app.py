@@ -42,7 +42,7 @@ if st.sidebar.button("🔄 Refresh Data", use_container_width=True, type="primar
 
 st.sidebar.markdown(f"**Run Date:** `{st.session_state.get('run_date', 'Not loaded')}`")
 st.sidebar.markdown(f"**Next Trading Day:** `{next_trading_day()}`")
-st.sidebar.markdown(f"**Primary macro:** {config.MACRO_VARS} | **Rips max dist:** {config.RIPS_MAX_DISTANCE}")
+
 
 OUTPUT_REPO = config.OUTPUT_REPO
 HF_TOKEN = config.HF_TOKEN
